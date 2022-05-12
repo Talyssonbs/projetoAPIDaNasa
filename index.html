@@ -11,20 +11,23 @@
 </head>
 
 <body>
-    <label> INSIRA UMA DATA</label><br>
-    <input type="date" id="data">
-    <button id="pesquisar" type="submit" value="btn">Mostrar Resultado</button>
-    <h1 class="titulo" id="titulo">
-        <!-- Titulo -->
-    </h1>
-    <h2 id="descri">
-        <!-- Descrição -->
-    </h2>
-    <h3 id="imagem">
-        <!-- Imagem -->
-    </h3>
-    <iframe id="video">
-        <!-- Video --></iframe>
+    <form>
+        <div class="bloco">
+            <label class="insiraData"> INSIRA UMA DATA</label><br>
+            <input type="date" id="data"><br>
+            <button id="pesquisar" type="submit" value="btn">BOTÃO MÁGICO</button>
+            <h1 class="titulo" id="titulo">
+                <!-- Titulo -->
+            </h1>
+            <h2 id="descri">
+                <!-- Descrição -->
+            </h2>
+            <img id="imagem" height="500" width="800">
+            <!-- Imagem -->
+            <iframe id="video" height="500" width="800">
+                <!-- Video --></iframe>
+        </div>
+    </form>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./index.js"></script>
 </body>

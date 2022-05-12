@@ -1,6 +1,5 @@
-/* Apod GET https://api.nasa.gov/planetary/apod */
-/* $ (“p”). click () */
-$("#pesquisar").click(function () {
+$("#pesquisar").click(function (event) {
+    event.preventDefault(event);
     const dia = $("#data").val();
     $.ajax({
         url: `https://api.nasa.gov/planetary/apod?api_key=mAiNZGEMKAUK6JGFaiUXHQsvt37EAgf4iH13zPnQ&date=${dia}`,
@@ -8,12 +7,15 @@ $("#pesquisar").click(function () {
             console.log(integrar)
             $("#titulo").text(integrar.title)
             $("#descri").text(integrar.explanation)
-            if (integrar.media_type === "imagem") {
+            if (integrar.media_type === "image") {
                 $("#imagem").attr("src", integrar.url);
-                $("#imagen").show();
+                $("#imagem").show();
+                $("#video").hide();
+
             } else {
                 $("#video").attr("src", integrar.url);
                 $("#video").show();
+                $("#imagem").hide();
             }
         },
         error: function (erro) {
